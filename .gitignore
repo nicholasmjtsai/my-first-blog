@@ -1,0 +1,7 @@
+*.pyc *~
+/.vscode
+__pycache__
+djangoenv
+db.sqlite3
+/static
+.DW_Store
