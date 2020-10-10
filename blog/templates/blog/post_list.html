@@ -6,15 +6,12 @@
         <div>
             <h1><a href="/">Nick's Blog</a></h1>
         </div>
+        {% for p in posts %}
         <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My first post</a></h2>
-            <p>jkfdl;afjkd;ajfkdl;sajfkdl;a</p>
+            <p>published: {{ p.published_date }}</p>
+            <h2><a href="">{{ p.title }}</a></h2>
+            <p> {{ p.text|linebreaksbr }}</p>
         </div>
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My second post</a></h2>
-            <p>ajfkld;ajfk;eajfke;ajkjfk;eawfjkda;kjfek;afje</p>
-        </div>
+        {% endfor %}
     </body>
 </html>
